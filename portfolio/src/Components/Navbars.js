@@ -1,51 +1,38 @@
-import React, { useState } from 'react';
-import {
-  Collapse,
-  Navbar,
-  NavbarToggler,
-  NavbarBrand,
-  Nav,
-  NavItem,
-  NavLink,
-  UncontrolledDropdown,
-  DropdownToggle,
-  DropdownMenu,
-  DropdownItem,
-  NavbarText
-} from 'reactstrap';
-import Logo from '../Assets/logo.svg'
+import React from 'react';
+import Logo from '../Assets/zaki.png'
+import './Navbars.css'
 
-const Navbars = (props) => {
-  const [isOpen, setIsOpen] = useState(false);
-
-  const toggle = () => setIsOpen(!isOpen);
-
+const Navbars = () => {
   return (
     <div className="Navbars">
-      <Navbar color="light" light expand="md">
+      <nav className="navbar navbar-expand-lg navbar-light">
         <div className="container">
-          <NavbarToggler onClick={toggle} />
-          <NavbarBrand href="/">
-            <img className="p" src={Logo}></img>
-          </NavbarBrand>
-          <Collapse isOpen={isOpen} navbar>
-            <Nav navbar>
-              <NavItem>
-                <NavLink href="/">HOME</NavLink>
-              </NavItem>
-              <NavItem>
-                <NavLink href="/">ABOUT</NavLink>
-              </NavItem>
-              <NavItem>
-                <NavLink href="/">WORKS</NavLink>
-              </NavItem>
-              <NavItem>
-                <NavLink href="/">CONTACT</NavLink>
-              </NavItem>
-            </Nav>
-          </Collapse>
+          <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span className="navbar-toggler-icon"></span>
+          </button>
+          <div className="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul className="navbar-nav mx-auto">
+              <li className="nav-item">
+                <a className="nav-link" href="/">HOME</a>
+              </li>
+              <li className="nav-item">
+                <a className="nav-link" href="/">ABOUT</a>
+              </li>
+              <li className="nav-item">
+                <a className="navbar" href="/">
+                  <img className="logo" src={Logo} alt="logo"></img>
+                </a>
+              </li>
+              <li className="nav-item">
+                <a className="nav-link" href="/">WORKS</a>
+              </li>
+              <li className="nav-item">
+                <a className="nav-link" href="/">CONTACT</a>
+              </li>
+            </ul>
+          </div>
         </div>
-      </Navbar>
+      </nav>
     </div>
   );
 }

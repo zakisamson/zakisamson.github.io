@@ -1,0 +1,10 @@
+.Hero {
+  min-height: 31.25rem;
+  justify-content: center;
+  align-items: center;
+  background-color: whitesmoke;
+}
+.hero-section {
+  justify-content: center;
+  align-items: center;
+}
